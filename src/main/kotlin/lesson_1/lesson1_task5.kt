@@ -6,5 +6,6 @@ fun main() {
     val minutes = (totalSeconds % 3600) / 60
     val seconds = totalSeconds % 60
     val formattedTime = String.format("%02d:%02d:%02d", hours, minutes, seconds)
+
     println(formattedTime)
 }
