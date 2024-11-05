@@ -6,8 +6,10 @@ fun main () {
     val principal = 70000
     val rate = 16.7
     val time = 20
+    val partOfFormula1 = 1
+    val partOfFormula2 = 100
 
-    val amount = principal * (1 + rate / 100).pow(time)
+    val amount = principal * (partOfFormula1 + rate / partOfFormula2).pow(time)
 
     println( "%.3f".format(amount))
 }
