@@ -2,11 +2,11 @@ package org.example.lesson_3
 
 fun main() {
     val userName = "Иван"
-    var greeting: String
+    var greeting = "Добрый день"
 
-    greeting = "Доброе утро, $userName!"
-    println(greeting)
+    println("$greeting, $userName!")
 
-    greeting = "Добрый вечер, $userName!"
-    println(greeting)
+    greeting = "Добрый вечер"
+
+    println("$greeting, $userName!")
 }
