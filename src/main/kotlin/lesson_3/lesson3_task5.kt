@@ -1,15 +1,18 @@
 package org.example.lesson_3
 
 fun main() {
-    val inputString = "D2-D4;0"
+    val input = "D2-D4;0"
 
-    val moveData = inputString.substringBefore(";")
-    val moveNumber = inputString.substringAfter(";")
+    val parts = input.split(";")
+    val moveDetails = parts[0]
+    val moveNumber = parts[1].toInt()
 
-    val fromSquare = moveData.substringBefore("-")
-    val toSquare = moveData.substringAfter("-")
+    val position = moveDetails.split("-")
 
-    println("Откуда: $fromSquare")
-    println("Куда: $toSquare")
+    val from = position[0]
+    val to = position[1]
+
+    println("Откуда: $from")
+    println("Куда: $to")
     println("Номер хода: $moveNumber")
 }
