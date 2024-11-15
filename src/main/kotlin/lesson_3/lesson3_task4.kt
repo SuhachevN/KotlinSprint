@@ -5,12 +5,16 @@ fun main() {
     val to1 = "E4"
     val moveNum1 = '1'
 
-    println("$from1-$to1; ход $moveNum1")
+    println("$from1-$to1;$moveNum1")
 
     val from2 = "D2"
-    val to2 = "D4"
     val moveNum2 = '2'
 
-    println("$from2-$to2; ход $moveNum2")
+    val letter = from2[0]
+    val number = from2[1].digitToInt()
+
+    val to2 = "$letter${number + 1}"
+
+    println("$from2-$to2;$moveNum2")
 
 }
