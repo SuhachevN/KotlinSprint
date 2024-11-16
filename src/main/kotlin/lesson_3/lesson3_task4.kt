@@ -8,7 +8,7 @@ fun main() {
     println("$from1-$to1;$moveNum1")
 
     val from2 = "D2"
-    val moveNum2 = '2'
+    val moveNum2 = moveNum1 + 1
 
     val letter = from2[0]
     val number = from2[1].digitToInt()
