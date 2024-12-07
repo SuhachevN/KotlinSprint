@@ -1,12 +1,15 @@
 package org.example.lesson_4
 
 fun main() {
-    val isSunny = IS_WEATHER_TODAY_SUNNY
-    val isTentOpen = IS_TENT_OPEN
-    val airHumidity = AIR_HUMIDITY
-    val currentSeason = SEASON
+    val isSunny = true
+    val isTentOpen = true
+    val airHumidity = 20
+    val currentSeason = "зима"
 
-    val isConditionsCorrect = isSunny && isTentOpen && airHumidity == 20 && currentSeason != SEASON
+    val isConditionsCorrect = (isSunny == IS_WEATHER_TODAY_SUNNY) &&
+            (isTentOpen == IS_TENT_OPEN) &&
+            (airHumidity == AIR_HUMIDITY) &&
+            (currentSeason != SEASON)
 
     println("Благоприятные ли условия сейчас для роста бобовых? $isConditionsCorrect")
 }
