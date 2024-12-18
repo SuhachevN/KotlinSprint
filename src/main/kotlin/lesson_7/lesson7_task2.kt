@@ -1,12 +1,12 @@
 package org.example.lesson_7
 
-import kotlin.random.Random
+
 
 fun main() {
     var isAuthenticated = false
 
     while (!isAuthenticated) {
-        val authCode = Random.nextInt(1000, 10000)
+        val authCode = (1000..10000).random()
         println("Ваш код авторизации: $authCode")
 
         print("Введите код для авторизации: ")
