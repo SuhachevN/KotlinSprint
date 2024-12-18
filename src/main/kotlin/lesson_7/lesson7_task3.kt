@@ -5,7 +5,6 @@ fun main() {
     val userNumber = readln().toInt()
 
     if (userNumber >= 0) {
-        // Вывод чётных чисел от 0 до введённого числа (включительно)
         for (i in 0..userNumber step 2) {
             println(i)
         }
