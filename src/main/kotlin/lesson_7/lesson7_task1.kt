@@ -1,7 +1,5 @@
 package org.example.lesson_7
 
-import kotlin.random.Random
-
 fun main() {
     val letters = 'a'..'z'
     val digits = '0'..'9'
