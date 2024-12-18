@@ -1,10 +1,8 @@
 package org.example.lesson_6
 
-import kotlin.random.Random
-
 fun main() {
     var numberOfAttempts = 5
-    val secretNumber = Random.nextInt(1, 10)
+    val secretNumber = (1..9).random()
     println("Угадай случайное число от 1 до 9. У тебя есть $numberOfAttempts попыток!")
 
     while (numberOfAttempts > 0) {
@@ -16,7 +14,7 @@ fun main() {
             break
         } else {
             numberOfAttempts--
-            println("Неугадал! Попробуй еще. У тебя осталось $numberOfAttempts попытки.")
+            println("Не угадал! Попробуй еще. У тебя осталось $numberOfAttempts попытки.")
         }
     }
     println("Было загадано число $secretNumber.")
