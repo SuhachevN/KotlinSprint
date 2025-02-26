@@ -4,12 +4,12 @@ fun main() {
     println("Какова будет длина пароля?")
     val passwordLength = readln().toInt()
 
-    val password = passwordGeneration(passwordLength)
+    val password = generatePassword(passwordLength)
 
     println("Сгенерированный пароль: $password")
 }
 
-fun passwordGeneration(length: Int): String {
+fun generatePassword(length: Int): String {
     val digits = '0'..'9'
     val specialChars = listOf('!','"', '#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/')
     val passwordBuilder = StringBuilder()
