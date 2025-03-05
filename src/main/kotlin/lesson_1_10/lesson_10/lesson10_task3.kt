@@ -1,4 +1,4 @@
-package org.example.lesson_10
+package org.example.lesson_1_10.lesson_10
 
 fun main() {
     println("Какова будет длина пароля?")

@@ -1,4 +1,4 @@
-package org.example.lesson_9
+package org.example.lesson_1_10.lesson_9
 
 fun main() {
     val ingredientsForOnePortion = listOf(2, 50, 15)
