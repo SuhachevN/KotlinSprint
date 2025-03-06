@@ -1,9 +1,10 @@
 package org.example.lesson_12
 
-class DailyWeather(temperatureDayInKalvin: Int, temperatureNightInKalvin: Int, precip: Boolean,) {
-    val dayTemp: Int = temperatureDayInKalvin - 273
-    val nightTemp: Int = temperatureNightInKalvin - 273
-    val precipitation: Boolean = precip
+class DailyWeather(temperatureDayInKalvin: Int, temperatureNightInKalvin: Int, isPrecip: Boolean,) {
+    val kelvinToCelsiusConversion = 273
+    val dayTemp: Int = temperatureDayInKalvin - kelvinToCelsiusConversion
+    val nightTemp: Int = temperatureNightInKalvin - kelvinToCelsiusConversion
+    val precipitation: Boolean = isPrecip
 
     init {
         displayWeather()
@@ -15,5 +16,5 @@ fun displayWeather() {
 }
 }
 fun main() {
-    val todayWeather = DailyWeather(temperatureDayInKalvin = 297, temperatureNightInKalvin = 291, precip = false)
+    val todayWeather = DailyWeather(temperatureDayInKalvin = 297, temperatureNightInKalvin = 291, isPrecip = false)
 }
