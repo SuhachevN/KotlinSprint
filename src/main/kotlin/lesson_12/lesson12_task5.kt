@@ -2,9 +2,10 @@ package org.example.lesson_12
 
 import kotlin.random.Random
 
-class Weather(kelvinDay: Int, kelvinNight: Int, val precipitation: Boolean) {
-    val dayTemp: Int = kelvinDay - 273
-    val nightTemp: Int = kelvinNight - 273
+class Weather(kelvinDay: Int, kelvinNight: Int, val isPrecipitation: Boolean) {
+    val kelvinToCelsiusConversion = 273
+    val dayTemp: Int = kelvinDay - kelvinToCelsiusConversion
+    val nightTemp: Int = kelvinNight - kelvinToCelsiusConversion
 }
 
 fun List<Int>.averageOrNull(): Double? {
@@ -23,7 +24,7 @@ fun main() {
 
     val dayTemps = weatherData.map { it.dayTemp }
     val nightTemps = weatherData.map { it.nightTemp }
-    val daysWithPrecipitation = weatherData.count { it.precipitation }
+    val daysWithPrecipitation = weatherData.count { it.isPrecipitation }
 
     val averageDayTemp = dayTemps.averageOrNull() ?: 0.0
     val averageNightTemp = nightTemps.averageOrNull() ?: 0.0
