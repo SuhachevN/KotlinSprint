@@ -1,8 +1,9 @@
 package org.example.lesson_13
 
-class PhoneDirectory (val userName: String,
-                      val phoneNumber: Long,
-                      val company: String?,) {
+class PhoneDirectory (
+    private val userName: String,
+    private val phoneNumber: Long,
+    private val company: String?,) {
     fun displayContact() {
         println("Имя: $userName")
         println("Номер телефона: $phoneNumber")
