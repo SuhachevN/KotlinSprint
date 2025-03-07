@@ -1,8 +1,9 @@
 package org.example.lesson_13
 
-class ContactInfo(val userName: String,
-                  val phoneNumber: Long,
-                  val company: String? = null,) {
+class ContactInfo(
+    private val userName: String,
+    private val phoneNumber: Long,
+    private val company: String? = null,) {
     fun displayContact() {
         println("Имя: $userName, Номер: $phoneNumber, Компания: ${company ?: "не Указано"}" )
     }
