@@ -4,7 +4,7 @@ open class SuperShip(
     val name: String,
     val speed: Int,
     val capacity: Int,
-    val iceBreak: Boolean = false,
+    val isIceBreak: Boolean = false,
 ) {
     open fun displayInfo() {
         println("Корабль: $name, скорость: $speed миль в час, вместимость: $capacity")
@@ -35,7 +35,7 @@ class Icebreaker(
     name: String = "Ледокол",
     speed: Int = 30,
     capacity: Int = 200,
-) : SuperShip(name, speed, capacity, iceBreak = true) {
+) : SuperShip(name, speed, capacity, isIceBreak = true) {
     override fun displayInfo() {
         println("Ледокол: $name, Скорость: $speed миль в час, Вместимость: $capacity тонн")
     }
@@ -50,7 +50,7 @@ fun main() {
     cargoShip.displayInfo()
     println()
     icebreaker.displayInfo()
-    println(icebreaker.iceBreak)
+    println(icebreaker.isIceBreak)
     println()
     liner.displayInfo()
 }
