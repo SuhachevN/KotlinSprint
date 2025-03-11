@@ -21,7 +21,7 @@ fun main() {
         try {
             phoneNumber = phoneInput!!.toLong()
         } catch (e: NumberFormatException) {
-            println("Ошибка: '${e.message}'. Введённый номер телефона некорректен. Попробуйте снова.")
+            println("Ошибка: '${e::class.simpleName}'. Введённый номер телефона некорректен. Попробуйте снова.")
             continue
         } catch (e: NullPointerException) {
             println("Ошибка: Введённый номер телефона не должен быть пустым.")
