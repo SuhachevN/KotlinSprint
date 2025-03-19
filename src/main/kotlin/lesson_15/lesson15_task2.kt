@@ -19,7 +19,11 @@ class PrecipitationAmount(private val amount: Double) : WeatherStationStats() {
 class WeatherServer {
     fun sendData(stats: WeatherStationStats) {
         println("Отправка данных на сервер...")
-        println(stats.getData())
+        when (stats) {
+            is Temperature -> println("Получены данные о температуре: ${stats.getData()}")
+            is PrecipitationAmount -> println("Получены данные о количестве осадков: ${stats.getData()}")
+            else -> println("Неизвестный тип данных.")
+        }
     }
 }
 
