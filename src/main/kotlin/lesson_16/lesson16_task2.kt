@@ -1,16 +1,14 @@
 package org.example.lesson_16
 
 class Circle(private val radius: Double) {
-    private val pi = 3.14
-    private val two = 2.0
 
     fun calculateCircumference(): String {
-        val circumference = two * pi * radius
+        val circumference = TWO * PI * radius
         return String.format("%.1f", circumference)
     }
 
     fun calculateArea(): Double {
-        return pi * radius * radius
+        return PI * radius * radius
     }
 }
 
@@ -23,3 +21,5 @@ fun main() {
     println("Длина окружности: $circumference")
     println("Площадь круга: $area")
 }
+private const val PI = 3.14
+private const val TWO = 2
