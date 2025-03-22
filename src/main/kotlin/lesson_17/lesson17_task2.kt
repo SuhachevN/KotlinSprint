@@ -1,27 +1,28 @@
 package org.example.lesson_17
 
 class Ship(
-    private val name: String,
+    private var _name: String,
     var averageSpeed: Double,
     var homePort: String
 ) {
-    fun getName(): String {
-        return name
-    }
+    var name: String
+        get() = _name
+        set(value) {
+            println("Предупреждение: имя корабля нельзя изменить. Текущее имя: $_name")
+        }
 
-    fun attemptToChangeName(newName: String) {
-        println("Предупреждение: имя корабля нельзя изменить. Текущее имя: $name")
+    init {
+        _name = name
     }
 }
 
 fun main() {
     val ship = Ship("Аврора", 20.0, "Ленинград")
 
-    println("Имя корабля: ${ship.getName()}")
+    println("Имя корабля: ${ship.name}")
     println("Средняя скорость: ${ship.averageSpeed} узлов")
     println("Порт приписки: ${ship.homePort}")
 
-    ship.attemptToChangeName("Наутилус")
     ship.averageSpeed = 21.0
     ship.homePort = "Котлин"
 
