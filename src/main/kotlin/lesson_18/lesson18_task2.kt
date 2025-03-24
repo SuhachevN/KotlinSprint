@@ -6,19 +6,19 @@ open class Die(private val sides: Int) {
         println("Выброшено $result на $sides-гранной кости")
     }
 }
-class FourSidedDie : Die(4) {
+class FourSidedDie : Die(sides = 4) {
     override fun roll() {
         super.roll()
     }
 }
 
-class SixSidedDie : Die(6) {
+class SixSidedDie : Die(sides = 6) {
     override fun roll() {
         super.roll()
     }
 }
 
-class EightSidedDie : Die(8) {
+class EightSidedDie : Die(sides = 8) {
     override fun roll() {
         super.roll()
     }
