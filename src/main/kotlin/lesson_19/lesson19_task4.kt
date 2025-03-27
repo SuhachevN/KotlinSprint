@@ -6,8 +6,7 @@ enum class Ammo(val damage: Int) {
     RED(20);
 }
 
-class Tank {
-    private var currentAmmo: Ammo? = null
+class Tank(private var currentAmmo: Ammo? = null) {
 
     fun equip(ammo: Ammo) {
         currentAmmo = ammo
@@ -16,7 +15,7 @@ class Tank {
 
     fun shoot() {
         if (currentAmmo != null) {
-            println("Выстрел! Нанесен урон: ${currentAmmo!!.damage}")
+            println("Выстрел! Нанесен урон: ${currentAmmo?.damage}")
         } else {
             println("Танк не заряжен! Нельзя произвести выстрел.")
         }
@@ -25,7 +24,6 @@ class Tank {
 
 fun main() {
     val tank = Tank()
-
     tank.shoot()
 
     tank.equip(Ammo.BLUE)
