@@ -1,7 +1,7 @@
 package org.example.lesson_21
 
 fun String.vowelExtension(): Int {
-    val vowels = "aeiouAEIOUуеыаояиюУЕЫАОЯИЮ"
+    val vowels = "aeiouAEIOUуеыаоэяиюУЕЫАОЭЯИЮ"
     return this.count { it in vowels }
 }
 
