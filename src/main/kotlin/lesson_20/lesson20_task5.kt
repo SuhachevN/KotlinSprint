@@ -1,7 +1,5 @@
 package org.example.lesson_20
 
-import kotlin.random.Random
-
 class Robot {
     private var modifier: ((String) -> String)? = null
     private val phrases = listOf(
@@ -13,7 +11,7 @@ class Robot {
     )
 
     fun say() {
-        val phrase = phrases[Random.nextInt(phrases.size)]
+        val phrase = phrases.random()
         val modifiedPhrase = modifier?.invoke(phrase) ?: phrase
         println(modifiedPhrase)
     }
