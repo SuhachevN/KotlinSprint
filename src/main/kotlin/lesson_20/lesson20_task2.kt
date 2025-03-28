@@ -14,7 +14,7 @@ fun main() {
     val player = Player("Наруто", 50, 100)
     player.printStatus()
 
-    val healPotion: (Player) -> Unit = fun(it: Player) {
+    val healPotion: (Player) -> Unit = { it ->
         it.currentHp = it.maxHp
         println("Персонаж ${it.name} использовал лечебное зелье")
     }
